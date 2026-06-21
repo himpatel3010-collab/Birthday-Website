@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<div id="page1" class="page active">
+
+<h1>🎂 Happy Birthday To You 🎂</h1>
+
+<p>Wishing you a fantastic birthday filled with happiness and joy!</p>
+
+<button onclick="showPage('page2')">
+🎁 Open Your Birthday Surprise
+</button>
+
+</div>
+
+<div id="page2" class="page">
+
+<h2>Choose Your Birthday Gift</h2>
+
+<button onclick="showPage('partyPage')">
+🎉 I'll Give You a Party
+</button>
+
+<button onclick="showPage('giftPage')">
+🎁 Send a Birthday Gift
+</button>
+
+</div>
+
+<div id="partyPage" class="page">
+
+<h2>🎉 Let's Plan The Party</h2>
+
+<input type="date">
+<br><br>
+
+<input type="time">
+<br><br>
+
+<button>Confirm Party</button>
+
+</div>
+
+<div id="giftPage" class="page">
+
+<h2>🎁 Thank You!</h2>
+
+<p>Scan QR Code</p>
+
+<img src="qr.png" width="250">
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
