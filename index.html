@@ -3,64 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday</title>
 
 <link rel="stylesheet" href="style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
 <body>
 
-<div id="page1" class="page active">
+<div class="balloons">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-<h1>🎂 Happy Birthday To You 🎂</h1>
+<!-- PAGE 1 -->
 
-<p>Wishing you a fantastic birthday filled with happiness and joy!</p>
+<section id="page1" class="page active">
+
+<div class="card">
+
+<div class="cake">
+🎂
+</div>
+
+<h1>Happy Birthday To You</h1>
+
+<p>
+Wishing you happiness, success, laughter and unforgettable memories on your special day.
+</p>
 
 <button onclick="showPage('page2')">
-🎁 Open Your Birthday Surprise
+Open Your Birthday Surprise
 </button>
 
 </div>
 
-<div id="page2" class="page">
+</section>
+
+<!-- PAGE 2 -->
+
+<section id="page2" class="page">
+
+<div class="card">
 
 <h2>Choose Your Birthday Gift</h2>
 
+<div class="option-grid">
+
+<div class="option-card">
+<h3>🎉</h3>
+<h4>I'll Give You a Party</h4>
+
 <button onclick="showPage('partyPage')">
-🎉 congratulations you are selected to give him a Party
+Continue
 </button>
+
+</div>
+
+<div class="option-card">
+<h3>🎁</h3>
+<h4>Send A Birthday Gift</h4>
 
 <button onclick="showPage('giftPage')">
-🎁 congratulations you are selected to give him a Birthday Gift
+Continue
 </button>
 
 </div>
 
-<div id="partyPage" class="page">
+</div>
 
-<h2>🎉 Let's Plan The Party</h2>
+</div>
+
+</section>
+
+<!-- RSVP PAGE -->
+
+<section id="partyPage" class="page">
+
+<div class="card">
+
+<h2>Party RSVP</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
 
 <input type="date">
-<br><br>
 
 <input type="time">
-<br><br>
 
-<button>Confirm Party</button>
+<textarea placeholder="Birthday Message"></textarea>
+
+<button type="button" onclick="showPage('thankyouPage')">
+Confirm RSVP
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- GIFT PAGE -->
+
+<section id="giftPage" class="page">
+
+<div class="card">
+
+<h2>Send A Birthday Gift 🎁</h2>
+
+<img src="qr.jpeg" class="qr">
+
+<p class="upi">
+UPI ID:
+<strong>himpatel3010@oksbi</strong>
+</p>
+
+<a
+class="upi-btn"
+href="upi://pay?pa=himpatel3010@oksbi&pn=Him%20Patel"
+>
+Open UPI App
+</a>
 
 </div>
 
-<div id="giftPage" class="page">
+</section>
 
-<h2>🎁 Thank You!</h2>
+<!-- THANK YOU -->
 
-<p>Scan QR Code</p>
+<section id="thankyouPage" class="page">
 
-<img src="qr.png" width="250">
+<div class="card">
+
+<h2>Thank You ❤️</h2>
+
+<p>
+Your wishes mean a lot.
+Looking forward to celebrating together.
+</p>
 
 </div>
+
+</section>
 
 <script src="script.js"></script>
 
