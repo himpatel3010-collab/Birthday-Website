@@ -302,3 +302,32 @@ font-size:1.5rem;
 .plan-card p{
 margin-bottom:20px;
 }
+.photo-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.birthday-photo{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+
+    box-shadow:
+    0 0 25px rgba(255,117,143,.7),
+    0 0 50px rgba(255,117,143,.5),
+    0 15px 40px rgba(0,0,0,.15);
+
+    animation:photoFloat 4s ease-in-out infinite;
+}
+
+@keyframes photoFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
